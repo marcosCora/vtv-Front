@@ -1,0 +1,26 @@
+<div class="m-3 flex flex-col items-center centered">
+
+    <h2 class="m-4 text-3xl">Vehiculos</h2>
+
+    <table class="table table-bordered table-dark">
+        <thead>
+        <tr>
+            <th scope="col">Patente</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Vencimiento VTV</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of vehicles">
+                <th scope="row">{{v.domain}}</th>
+                <td>{{v.brand}}</td>
+                <td>{{v.model}}</td>
+                <td>{{v.expirationVtv}}</td>
+                <td><button type="button" class="btn btn-primary">Detalle</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

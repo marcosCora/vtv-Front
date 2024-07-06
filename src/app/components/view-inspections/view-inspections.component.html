@@ -1,0 +1,29 @@
+<div class="m-3 flex flex-col items-center centered">
+
+    <h2 class="m-4 text-3xl">Inspecciones</h2>
+
+    <table class="table table-bordered table-dark">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Resultado</th>
+            <th scope="col">Patente Vehiculo</th>
+            <th scope="col">DNI Inspector</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of inspections">
+                <th scope="row">{{i.idInspection}}</th>
+                <td>{{i.dateInspection}}</td>
+                <td>{{i.result}}</td>
+                <td>{{i.domainVehicle}}</td>
+                <td>{{i.dniInspector}}</td>
+                <td><button type="button" class="btn btn-primary">Detalle</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+  

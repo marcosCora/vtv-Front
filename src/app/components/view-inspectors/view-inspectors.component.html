@@ -1,0 +1,26 @@
+<div class="m-3 flex flex-col items-center centered">
+
+    <h2 class="m-4 text-3xl">Inspectores</h2>
+
+    <table class="table table-bordered table-dark">
+        <thead>
+        <tr>
+            <th scope="col">DNI</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let i of inspectors">
+            <th scope="row">{{i.dni}}</th>
+            <td>{{i.name}}</td>
+            <td>{{i.lastName}}</td>
+            <td>{{i.specialty}}</td>
+            <td><button type="button" class="btn btn-primary">Detalle</button></td>
+        </tr>
+        </tbody>
+    </table>
+    
+</div>

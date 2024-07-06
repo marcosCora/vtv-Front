@@ -1,0 +1,26 @@
+<div class="m-3 flex flex-col items-center centered">
+
+    <h2 class="m-4 text-3xl">Propietarios</h2>
+
+    <table class="table table-bordered table-dark">
+        <thead>
+        <tr>
+            <th scope="col">DNI</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Tipo</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let o of owners">
+                <th scope="row">{{o.dni}}</th>
+                <td>{{o.name}}</td>
+                <td>{{o.lastName}}</td>
+                <td>{{o.type}}</td>
+                <td><button type="button" class="btn btn-primary">Detalle</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
