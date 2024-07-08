@@ -14,5 +14,10 @@ export class OwnerService {
 
    getOwners() : Observable<Owner[]>{ 
     return this.http.get<Owner[]>(this.apiUrl);
-  } 
+  }
+  
+  postNewOwner(owner : Owner) : Observable<String>{
+    return this.http.post<String>(`${this.apiUrl}/creat`, owner);
+  }
+
 }
