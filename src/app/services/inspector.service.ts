@@ -18,4 +18,8 @@ export class InspectorService {
   } 
 
 
+  postInspector(inspector : Inspector) : Observable<string>{
+    return this.http.post<string>(`${this.apiUrl}/creat`, inspector);
+  }
+
 }

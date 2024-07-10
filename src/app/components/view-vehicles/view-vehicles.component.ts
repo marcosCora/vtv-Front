@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Vehicle } from 'src/app/interfaces/vehicle';
 import { VehicleService } from 'src/app/services/vehicle.service';
 
@@ -11,7 +12,7 @@ export class ViewVehiclesComponent implements OnInit{
 
   vehicles : Vehicle[] = [];
 
-  constructor(private service : VehicleService){}
+  constructor(private service : VehicleService, private route : ActivatedRoute){}
 
   ngOnInit(): void {
     this.service.getVehicles().subscribe((response) =>{

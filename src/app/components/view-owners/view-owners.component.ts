@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Owner } from 'src/app/interfaces/owner';
 import { OwnerService } from 'src/app/services/owner.service';
 
@@ -11,7 +12,7 @@ export class ViewOwnersComponent implements OnInit{
 
   owners : Owner[] = [];
 
-  constructor(private service : OwnerService){}
+  constructor(private service : OwnerService, private route : ActivatedRoute){}
 
   ngOnInit(): void {
     this.service.getOwners().subscribe((response) =>{

@@ -17,6 +17,8 @@ export class OwnerService {
   }
   
   postNewOwner(owner : Owner) : Observable<String>{
+    console.log("Servicio: ", owner);
+    
     return this.http.post<String>(`${this.apiUrl}/creat`, owner);
   }
 

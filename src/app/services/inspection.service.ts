@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Inspection } from '../interfaces/inspection';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,4 +16,6 @@ export class InspectionService {
    getInspection() : Observable<Inspection[]>{ 
     return this.http.get<Inspection[]>(this.apiUrl);
   } 
+
+  
 }
